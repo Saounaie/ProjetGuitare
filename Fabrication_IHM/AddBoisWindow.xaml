@@ -1,0 +1,39 @@
+﻿<Window x:Class="Fabrication_IHM.AddBoisWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Fabrication_IHM"
+        mc:Ignorable="d"
+        Title="AddBoisWindow" Height="450" Width="800">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Width="600">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Content="Nom du bois :" Margin="10"/>
+        <TextBox x:Name="nomBoisTBX" Grid.Row="0" Grid.Column="1" Margin="10" Width="200"/>
+
+        <Label Grid.Row="1" Grid.Column="0" Content="Poids :" Margin="10"/>
+        <TextBox x:Name="poidsBoisTBX" Grid.Row="1" Grid.Column="1" Margin="10" Width="200"/>
+
+        <Label Grid.Row="2" Grid.Column="0" Content="Région :" Margin="10"/>
+        <TextBox x:Name="régionBoisTBX" Grid.Row="2" Grid.Column="1"  Margin="10" Width="200"/>
+
+        <Label Grid.Row="3" Grid.Column="0" Content="Stock :" Margin="10"/>
+        <TextBox x:Name="stockBoisTBX" Grid.Row="3" Grid.Column="1" Margin="10" Width="200"/>
+
+        <StackPanel Grid.Row="4" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
+            <Button x:Name="cancelAddBoisBTN" Content="Annuler" Margin="10" Width="80" Click="cancelAddBoisBTN_Click"/>
+            <Button x:Name="addBoisBTN" Content="Ajouter" Click="addBoisBTN_Click" Margin="10" Width="80" />
+        </StackPanel>
+    </Grid>
+</Window>

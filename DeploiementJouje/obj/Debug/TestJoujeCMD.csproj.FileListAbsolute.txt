@@ -1,0 +1,8 @@
+C:\Users\trinc\source\repos\DeploiementJouje\DeploiementJouje\bin\Debug\DeploiementJouje.exe.config
+C:\Users\trinc\source\repos\DeploiementJouje\DeploiementJouje\bin\Debug\DeploiementJouje.exe
+C:\Users\trinc\source\repos\DeploiementJouje\DeploiementJouje\bin\Debug\DeploiementJouje.pdb
+C:\Users\trinc\source\repos\DeploiementJouje\DeploiementJouje\obj\Debug\TestJoujeCMD.csproj.AssemblyReference.cache
+C:\Users\trinc\source\repos\DeploiementJouje\DeploiementJouje\obj\Debug\TestJoujeCMD.csproj.SuggestedBindingRedirects.cache
+C:\Users\trinc\source\repos\DeploiementJouje\DeploiementJouje\obj\Debug\TestJoujeCMD.csproj.CoreCompileInputs.cache
+C:\Users\trinc\source\repos\DeploiementJouje\DeploiementJouje\obj\Debug\DeploiementJouje.exe
+C:\Users\trinc\source\repos\DeploiementJouje\DeploiementJouje\obj\Debug\DeploiementJouje.pdb

@@ -1,0 +1,55 @@
+{
+    "micros": [
+        {
+            "nomMicro" : "Fishman Pro Neo D01",
+            "caracteristiquesMicro" : "Micro passif simple pour rosace",
+            "stockMicro" : 0
+        },
+        {
+            "nomMicro" : "B.Band 1470 AST",
+            "caracteristiquesMicro" : "Acoustic Soundboard Transducer",
+            "stockMicro" : 0
+        },
+        {
+            "nomMicro" : "Seymour 11500-30",
+            "caracteristiquesMicro" : "PickUp de guitare acoustique Soundhole Woody Single Coil - Finition érable",
+            "stockMicro" : 0
+        },
+        {
+            "nomMicro" : "Fishman ACC-MAN-NPU Acoustic",
+            "caracteristiquesMicro" : "Matrix micro seulement format étroit",
+            "stockMicro" : 0
+        },
+        {
+            "nomMicro" : "Seymour 11500-31",
+            "caracteristiquesMicro" : "Soundhole pickup de guitare acoustique Woody Hum - Finition érable",
+            "stockMicro" : 0
+        },
+        {
+            "nomMicro" : "Fishman Pro-Ago-094 AG SERIES",
+            "caracteristiquesMicro" : "Passive Under Saddle PickUp Narrow",
+            "stockMicro" : 0
+        },
+        {
+            "nomMicro" : "Fishman Pro-Neo-D02",
+            "caracteristiquesMicro" : "Micro passif double pour rosace",
+            "stockMicro" : 0
+        },
+        {
+            "nomMicro" : "Dimarzio Air Norton",
+            "caracteristiquesMicro" : "7 strings nickel Poles-Black",
+            "stockMicro" : 0
+        },
+        {
+            "nomMicro" : "EMG-EMGJLV",
+            "caracteristiquesMicro" : "Active Long Jazz Bass Pickup",
+            "stockMicro" : 0
+        },
+        {
+            "nomMicro" : "Seymour-JB",
+            "caracteristiquesMicro" : "Pickup guitare 7 cordes",
+            "stockMicro" : 0
+        }
+
+    ]
+}

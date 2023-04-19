@@ -1,0 +1,124 @@
+{
+    "bois": [
+        {
+       
+            "nomBois" : "Bois de Frêne",
+            "poidsBois": 6,
+            "région" : "Carrière d'Astrub"
+        },
+        {
+       
+            "nomBois": "Bois de Châtaignier",
+            "poidsBois": 5,
+            "région": "Champs des Ingalsse"
+        },
+        {
+          
+            "nomBois": "Bois de Noyer",
+            "poidsBois": 41,
+            "région": "Port de Madrestam"
+        },
+        {
+           
+            "nomBois": "Bois de Chêne",
+            "poidsBois": 0.4,
+            "région": "Forêt d'Amakna"
+        },
+        {
+          
+            "nomBois": "Bois de Bombu",
+            "poidsBois": 10,
+            "région": "Massif de Cania"
+        },
+        {
+          
+            "nomBois": "Bois d'Erable",
+            "poidsBois": 145,
+            "région": "Montagne des Craqueleurs"
+        },
+        {
+           
+            "nomBois": "Bois d'Oliviolet",
+            "poidsBois": 70,
+            "région": "Désolation de Sidimote"
+        },
+        {
+           
+            "nomBois": "Bois de Pin",
+            "poidsBois": 4,
+            "région": "Champs de glace"
+        },
+        {
+         
+            "nomBois": "Bois d'If",
+            "poidsBois": 100,
+            "région": "Tainéla"
+        },
+        {
+          
+            "nomBois": "Bois de Bambou",
+            "poidsBois": 2,
+            "région": "Rivière Kawaii"
+        },
+        {
+        
+            "nomBois": "Bois de Merisier",
+            "poidsBois": 66,
+            "région": "Péninsule des gelées"
+        },
+        {
+            
+            "nomBois": "Bois de Noisetier",
+            "poidsBois": 2,
+            "région": "Jungle obscure"
+        },
+        {
+         
+            "nomBois": "Bois d'Ebène",
+            "poidsBois": 34,
+            "région": "Dédale du Dark Vlad"
+        },
+        {
+            
+            "nomBois": "Bois de Kaliptus",
+            "poidsBois": 84,
+            "région": "Village des Eleveurs"
+        },
+        {
+            "idBois" : 15,
+            "nomBois": "Bois de Charme",
+            "poidsBois": 79,
+            "région": "Coin des Bouftous"
+        },
+        {
+            
+            "nomBois": "Bois de Bambou Sombre",
+            "poidsBois": 54,
+            "région": "Feudala"
+        },
+        {
+            
+            "nomBois": "Bois d'Orme",
+            "poidsBois": 96,
+            "région": "Presqu'île des Dragoeufs"
+        },
+        {
+
+            "nomBois": "Bois de Bamboub Sacré",
+            "poidsBois": 13,
+            "région": "Akwadala"
+        },
+        {
+            "nomBois": "Bois de Tremble",
+            "poidsBois": 21,
+            "région": "Forêt des pins perdus"
+        },
+        {
+            
+            "nomBois": "Bois d'Aquajou",
+            "poidsBois": 13,
+            "région": "Domaine des Trithons"
+        }
+        
+    ]
+}

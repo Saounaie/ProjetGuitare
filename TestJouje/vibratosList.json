@@ -1,0 +1,40 @@
+{
+    "vibratos" : [
+        {
+            "nomVibrato" : "Floyd Rose",
+            "typeVibrato" : "Floyd Rose Original Tremolo Kit Gold",
+            "stockVibrato" : 0
+        },
+        {
+            "nomVibrato" : "Floyd Rose",
+            "typeVibrato" : "Floyrd Rose Original Tremolo Kit",
+            "stockVibrato" : 0
+        },
+        {
+            "nomVibrato" : "Fender",
+            "typeVibrato" : "Highway",
+            "stockVibrato" : 0
+        },
+        {
+            "nomVibrato" : "Floyd Rose",
+            "typeVibrato" : "RT200S-BS Floyrd Rose",
+            "stockVibrato" : 0
+        },
+        {
+            "nomVibrato" : "Eagleparts",
+            "typeVibrato" : "Vibrato/Tremolo",
+            "stockVibrato" : 0
+        },
+        {
+            "nomVibrato" : "Bigsby",
+            "typeVibrato" : "Vibrato B5-LH",
+            "stockVibrato" : 0
+        },
+        {
+            "nomVibrato" : "Shadow",
+            "typeVibrato" : "Accordeur Contour",
+            "stockVibrato" : 0
+        }
+
+    ]
+}

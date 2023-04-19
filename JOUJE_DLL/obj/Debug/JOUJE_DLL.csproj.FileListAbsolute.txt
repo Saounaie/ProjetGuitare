@@ -1,0 +1,9 @@
+C:\Users\trinc\source\repos\DeploiementJouje\JOUJE_DLL\bin\Debug\JOUJE_DLL.dll
+C:\Users\trinc\source\repos\DeploiementJouje\JOUJE_DLL\bin\Debug\JOUJE_DLL.pdb
+C:\Users\trinc\source\repos\DeploiementJouje\JOUJE_DLL\bin\Debug\Dapper.dll
+C:\Users\trinc\source\repos\DeploiementJouje\JOUJE_DLL\bin\Debug\Dapper.xml
+C:\Users\trinc\source\repos\DeploiementJouje\JOUJE_DLL\obj\Debug\JOUJE_DLL.csproj.AssemblyReference.cache
+C:\Users\trinc\source\repos\DeploiementJouje\JOUJE_DLL\obj\Debug\JOUJE_DLL.csproj.CoreCompileInputs.cache
+C:\Users\trinc\source\repos\DeploiementJouje\JOUJE_DLL\obj\Debug\JOUJE_DLL.csproj.CopyComplete
+C:\Users\trinc\source\repos\DeploiementJouje\JOUJE_DLL\obj\Debug\JOUJE_DLL.dll
+C:\Users\trinc\source\repos\DeploiementJouje\JOUJE_DLL\obj\Debug\JOUJE_DLL.pdb
