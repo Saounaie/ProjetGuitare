@@ -19,9 +19,11 @@ namespace Fabrication_IHM
     /// </summary>
     public partial class CLientsWindow : Window
     {
+
         public CLientsWindow()
         {
             InitializeComponent();
+            DataContext = Coordination.Coordination.Instance;
         }
     }
 }

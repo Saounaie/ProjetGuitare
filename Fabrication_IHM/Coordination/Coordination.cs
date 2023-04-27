@@ -30,6 +30,7 @@ namespace Fabrication_IHM.Coordination
             Liste_Bois = jouje.GetAllBoisAsync().Result;
             Liste_Micros = jouje.GetAllMicrosAsync().Result;
             Liste_Vibratos = jouje.GetAllVibratosAsync().Result;
+            Liste_Commandes = jouje.GetAllCommandesAsync().Result;
         }
 
         // -------------------------- BOIS
@@ -117,6 +118,15 @@ namespace Fabrication_IHM.Coordination
         {
             await jouje.DeleteVibratoAsync(id);
             Liste_Vibratos = await jouje.GetAllVibratosAsync();
+        }
+
+        // ------------------------------- COMMANDES
+        private IEnumerable<Commande> _Liste_Commandes;
+
+        public IEnumerable<Commande> Liste_Commandes
+        {
+            get { return _Liste_Commandes; }
+            set { _Liste_Commandes = value; Signale_Changement(); }
         }
 
 

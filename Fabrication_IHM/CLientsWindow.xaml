@@ -3,10 +3,58 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Fabrication_IHM"
+        xmlns:local="clr-namespace:Fabrication_IHM" xmlns:coordination="clr-namespace:Fabrication_IHM.Coordination" d:DataContext="{d:DesignInstance Type=coordination:Coordination}"
         mc:Ignorable="d"
-        Title="Clients" Height="600" Width="800" WindowStartupLocation="CenterScreen">
+        Title="Commandes" Height="600" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header avec le titre -->
+        <Border Grid.Row="0" Background="#FF003366">
+            <TextBlock Text="Liste des commandes" 
+                       Foreground="White" 
+                       Margin="10" 
+                       FontSize="24" 
+                       FontWeight="Bold"/>
+        </Border>
+
+        <!-- Liste de toutes les commandes -->
+        <ListBox Grid.Row="1" Margin="10 10 10 10" ItemsSource="{Binding Liste_Commandes}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Background="#EEE">
+                        <Run Text="Id :" />
+                        <Run Text="{Binding IdCommande}"/>
+                        <Run Text="" />
+                        
+                        <Run Text="Date :" />
+                        <Run Text="{Binding DateCommande}"/>
+                        <Run Text="" />
+                        
+                        <Run Text="Guitare numéro :" />
+                        <Run Text="{Binding IdGuitare}"/>
+                        <Run Text="" />
+                        
+                        <Run Text="Numéro commande :" />
+                        <Run Text="{Binding NumCoommande}"/>
+                        <Run Text="" />
+
+                    </TextBlock>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <!-- Boutons "Valider" et "Retour" -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
+            <Button Content="Valider" 
+                    Margin="0,0,10,0" 
+                    />
+            <Button Content="Retour" 
+                    />
+        </StackPanel>
     </Grid>
 </Window>

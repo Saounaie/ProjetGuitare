@@ -21,73 +21,73 @@ namespace TestJouje
 
         public class PickupList
         {
-            public List<PickUp> micros { get; set; }
+            public List<NS_Jouje.PickUp> micros { get; set; }
         }
 
         public class VibratoList
         {
-            public List<Vibrato> vibratos { get; set; }
+            public List<NS_Jouje.Vibrato> vibratos { get; set; }
         }
-            static void Main(string[] args)
+        static void Main(string[] args)
+        {
+            Base jouje = new Base();
+
+            // jouje.AddBois("Bois de Bambou", 7, "Bambouserai");
+
+
+            // jouje.UpdateBoisGPT(5, null, null, "Chez Valentin"); 
+
+            // jouje.DeleteBois(6);
+
+            var bois = jouje.GetAllBois();
+
+            foreach (var e in bois)
             {
-                Base jouje = new Base();
+                Console.WriteLine($"{e.idBois} {e.nomBois} {e.poidsBois} {e.région}");
+            }
 
-                // jouje.AddBois("Bois de Bambou", 7, "Bambouserai");
+            Console.WriteLine("------------------MICROS--------------");
+            //jouje.AddMicro("Blue Spark", "Il est encore plus cool");
+            //jouje.UpdateMicro(2, null, "Il est même vachement bien");
+            var micros = jouje.GetAllMicros();
+            foreach (var e in micros)
+            {
+                Console.WriteLine($"{e.idMicro} {e.nomMicro} {e.caracteristiquesMicro}");
+            }
 
+            Console.WriteLine("---------------------VIBRATO--------------------");
+            //jouje.AddVibrato("Vibrato 2", "Il est un peu mieux que le 1");
+            //jouje.UpdateVibrato(2, "Vibrato Premium", null);
 
-                // jouje.UpdateBoisGPT(5, null, null, "Chez Valentin"); 
-
-                // jouje.DeleteBois(6);
-
-                var bois = jouje.GetAllBois();
-
-                foreach (var e in bois)
-                {
-                    Console.WriteLine($"{e.idBois} {e.nomBois} {e.poidsBois} {e.région}");
-                }
-
-                Console.WriteLine("------------------MICROS--------------");
-                //jouje.AddMicro("Blue Spark", "Il est encore plus cool");
-                //jouje.UpdateMicro(2, null, "Il est même vachement bien");
-                var micros = jouje.GetAllMicros();
-                foreach (var e in micros)
-                {
-                    Console.WriteLine($"{e.idMicro} {e.nomMicro} {e.caracteristiquesMicro}");
-                }
-
-                Console.WriteLine("---------------------VIBRATO--------------------");
-                //jouje.AddVibrato("Vibrato 2", "Il est un peu mieux que le 1");
-                //jouje.UpdateVibrato(2, "Vibrato Premium", null);
-
-                var vibratos = jouje.GetAllVibratos();
-                foreach (var e in vibratos)
-                {
-                    Console.WriteLine($"{e.idVibrato} {e.nomVibrato} {e.typeVibrato}");
-                }
-                Console.WriteLine("-------------------GUITARES--------------------");
+            var vibratos = jouje.GetAllVibratos();
+            foreach (var e in vibratos)
+            {
+                Console.WriteLine($"{e.idVibrato} {e.nomVibrato} {e.typeVibrato}");
+            }
+            Console.WriteLine("-------------------GUITARES--------------------");
 
 
-                /*var nvGuitare = new Guitare
-                {
-                    nomGuitare = "Jouje",
-                    idBoisCorps = 1,
-                    idBoisManche = 1,
-                    idBoisTouche = 1,
-                    idClient = 1,
-                    idMicroCentral = 2,
-                    idMicroDroit = 2,
-                    idMicroGauche = 2,
-                    idVibrato = 1
-                };
-                jouje.AddGuitare(ref nvGuitare);*/
-                var guitares = jouje.GetAllGuitares();
-                foreach (var e in guitares)
-                {
-                    Console.WriteLine($"{e.idGuitare}  {e.nomGuitare} {e.idMicro_1}");
-                }
+            /*var nvGuitare = new Guitare
+            {
+                nomGuitare = "Jouje",
+                idBoisCorps = 1,
+                idBoisManche = 1,
+                idBoisTouche = 1,
+                idClient = 1,
+                idMicroCentral = 2,
+                idMicroDroit = 2,
+                idMicroGauche = 2,
+                idVibrato = 1
+            };
+            jouje.AddGuitare(ref nvGuitare);*/
+            var guitares = jouje.GetAllGuitares();
+            foreach (var e in guitares)
+            {
+                Console.WriteLine($"{e.idGuitare}  {e.nomGuitare} {e.idMicro_1}");
+            }
 
-                // JSON FOR WOOD
-                Console.WriteLine("------------------JSON------------------");
+            // JSON FOR WOOD
+            Console.WriteLine("------------------JSON------------------");
             /*string fileName = @"C:\Users\trinc\source\repos\DeploiementJouje\TestJouje\pickUp.json";
             string jsonString = File.ReadAllText(fileName);
             BoisList boisJson = JsonSerializer.Deserialize<BoisList>(jsonString);
@@ -107,8 +107,8 @@ namespace TestJouje
 
             string fileName = @"C:\Users\trinc\OneDrive\Documents\vibratosList.json";
             string jsonString = File.ReadAllText(fileName);
-            VibratoList vibratoJson = JsonSerializer.Deserialize<VibratoList>(jsonString); 
-            foreach(var _vibrato in vibratoJson.vibratos)
+            VibratoList vibratoJson = JsonSerializer.Deserialize<VibratoList>(jsonString);
+            foreach (var _vibrato in vibratoJson.vibratos)
             {
                 // jouje.AddVibrato(_vibrato.nomVibrato, _vibrato.typeVibrato, _vibrato.stockVibrato);
             }
@@ -127,6 +127,40 @@ namespace TestJouje
             Console.WriteLine("Bois numéro 3 :");
             var boisTrois = ws.GetBoisByIdAsync(3).Result;
             Console.WriteLine(boisTrois.NomBois);
+            Console.WriteLine("Commandes :");
+            var commandes = jouje.GetAllCommandes();
+            foreach (var e in commandes)
+            {
+                Console.WriteLine(e.numCoommande);
+            }
+
+            var clientAVerifierBon = new NS_Jouje.Client
+            {
+                PseudoClient = "jirome",
+                MdpClient = "mathis"
+            };
+
+            var clientATester = ws.GetClientByIDAsync(4).Result;
+            Console.WriteLine($"PSEUDO DU CLIENT NUMERO 4 {clientATester.PseudoClient}");
+
+            var result = ws.VerifyLoginWithIDAsync(clientATester).Result;
+            if (result)
+            {
+                Console.WriteLine($"JE PETE MON CRANE SI CA MARCHE {clientATester.PseudoClient} {clientATester.IdClient}");
+            }
+            /*if (result)
+            {
+                
+                Console.WriteLine($"{clientAVerifierBon.IdClient} ----- {clientAVerifierBon.PseudoClient}");
+            }*/
+            Console.WriteLine(result);
+
+            Console.WriteLine("Test du client connecté");
+            var clientTrouve = ws.GetClientByIDAsync(4).Result;
+            Console.WriteLine(clientTrouve.IdClient);
+
+        
+
 
            
             

@@ -1,0 +1,27 @@
+﻿<Window x:Class="Custom_IHM.InscriptionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Custom_IHM"
+        mc:Ignorable="d"
+        Title="InscriptionWindow" Height="600" Width="800">
+    <Grid Background="#FFF2F2F2">
+        <StackPanel Orientation="Vertical" Margin="50">
+            <TextBlock Text="Inscription" FontSize="24" FontWeight="Bold" Margin="0 0 0 30"/>
+            <StackPanel Orientation="Vertical" Margin="0 0 0 20">
+                <TextBlock Text="Nom d'utilisateur" FontSize="16" Margin="0 0 0 10"/>
+                <TextBox x:Name="UsernameTextBox" FontSize="16" Padding="10" BorderThickness="0 0 0 2" BorderBrush="#FFBDBDBD"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="0 0 0 20">
+                <TextBlock Text="Mot de passe" FontSize="16" Margin="0 0 0 10"/>
+                <PasswordBox x:Name="PasswordBox" FontSize="16" Padding="10" BorderThickness="0 0 0 2" BorderBrush="#FFBDBDBD"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+                <Button x:Name="signUpBTN" Click="signUpBTN_Click" Content="S'inscrire" FontSize="18" Padding="20" Margin="0 30 0 0" Background="#FF00B894" Foreground="#FFFDFDFD"/>
+                <Button x:Name="connectBTN" Click="connectBTN_Click" Content="Se connecter" FontSize="18" Padding="20" Margin="0 30 0 0" Background="#FF00B894" Foreground="#FFFDFDFD"/>
+            </StackPanel>
+            
+        </StackPanel>
+    </Grid>
+</Window>

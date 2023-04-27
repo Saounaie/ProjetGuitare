@@ -27,7 +27,7 @@
         <!-- Menu -->
         <StackPanel Grid.Row="1" Grid.Column="0" Background="#007acc">
             <Button x:Name="stockBtn" Content="Stocks" Foreground="White" FontSize="32" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10 220 10 40" Click="stockBtn_Click"/>
-            <Button x:Name="clientsBtn" Content="Clients" Foreground="White" FontSize="32" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10 0 10 40" Click="clientsBtn_Click"/>
+            <Button x:Name="clientsBtn" Content="Commandes" Foreground="White" FontSize="32" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10 0 10 40" Click="clientsBtn_Click"/>
         </StackPanel>
 
         <!-- Contenu -->

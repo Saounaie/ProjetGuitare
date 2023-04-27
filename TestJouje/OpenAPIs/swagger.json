@@ -268,21 +268,281 @@
         ],
         "responses": {
           "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Client/CreateClient": {
+      "post": {
+        "tags": [
+          "Client"
+        ],
+        "operationId": "CreateClient",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Client"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Client"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Client"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
             "description": "Success",
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/Bois"
+                  "$ref": "#/components/schemas/Client"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Bois"
+                  "$ref": "#/components/schemas/Client"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Bois"
+                  "$ref": "#/components/schemas/Client"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Client/UpdateClient": {
+      "put": {
+        "tags": [
+          "Client"
+        ],
+        "operationId": "UpdateClient",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Client"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Client"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Client"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Client"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Client"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Client"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Client/VerifyLogin": {
+      "post": {
+        "tags": [
+          "Client"
+        ],
+        "operationId": "VerifyLogin",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Client"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Client"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Client"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Client/GetClientByID/{clientID}": {
+      "get": {
+        "tags": [
+          "Client"
+        ],
+        "operationId": "GetClientByID",
+        "parameters": [
+          {
+            "name": "clientID",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Client"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Client"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Client"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Client/VerifyLoginWithID": {
+      "post": {
+        "tags": [
+          "Client"
+        ],
+        "operationId": "VerifyLoginWithID",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Client"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Client"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Client"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Commande/GetAllCommandes": {
+      "get": {
+        "tags": [
+          "Commande"
+        ],
+        "operationId": "GetAllCommandes",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Commande"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Commande"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Commande"
+                  }
                 }
               }
             }
@@ -509,6 +769,328 @@
         }
       }
     },
+    "/api/PickUp/GetAllMicros": {
+      "get": {
+        "tags": [
+          "PickUp"
+        ],
+        "operationId": "GetAllMicros",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PickUp"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PickUp"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PickUp"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/PickUp/AddMicro": {
+      "post": {
+        "tags": [
+          "PickUp"
+        ],
+        "operationId": "AddMicro",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PickUp"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PickUp"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PickUp"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PickUp"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PickUp"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PickUp"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/PickUp/UpdateMicro": {
+      "put": {
+        "tags": [
+          "PickUp"
+        ],
+        "operationId": "UpdateMicro",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PickUp"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PickUp"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PickUp"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PickUp"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PickUp"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PickUp"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/PickUp/DeleteMicro": {
+      "delete": {
+        "tags": [
+          "PickUp"
+        ],
+        "operationId": "DeleteMicro",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Vibrato/GetAllVibratos": {
+      "get": {
+        "tags": [
+          "Vibrato"
+        ],
+        "operationId": "GetAllVibratos",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Vibrato"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Vibrato"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Vibrato"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Vibrato/AddVibrato": {
+      "post": {
+        "tags": [
+          "Vibrato"
+        ],
+        "operationId": "AddVibrato",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Vibrato"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Vibrato"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Vibrato"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Vibrato"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Vibrato"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Vibrato"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Vibrato/UpdateVibrato": {
+      "put": {
+        "tags": [
+          "Vibrato"
+        ],
+        "operationId": "UpdateVibrato",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Vibrato"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Vibrato"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Vibrato"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Vibrato"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Vibrato"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Vibrato"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Vibrato/DeleteVibrato": {
+      "delete": {
+        "tags": [
+          "Vibrato"
+        ],
+        "operationId": "DeleteVibrato",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/WeatherForecast": {
       "get": {
         "tags": [
@@ -569,6 +1151,49 @@
           "région": {
             "type": "string",
             "nullable": true
+          },
+          "stockBois": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Client": {
+        "type": "object",
+        "properties": {
+          "idClient": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pseudoClient": {
+            "type": "string",
+            "nullable": true
+          },
+          "mdpClient": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Commande": {
+        "type": "object",
+        "properties": {
+          "idCommande": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dateCommande": {
+            "type": "string",
+            "nullable": true
+          },
+          "numCoommande": {
+            "type": "string",
+            "nullable": true
+          },
+          "idGuitare": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -659,6 +1284,48 @@
           "idVibrato": {
             "type": "integer",
             "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PickUp": {
+        "type": "object",
+        "properties": {
+          "idMicro": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nomMicro": {
+            "type": "string",
+            "nullable": true
+          },
+          "caracteristiquesMicro": {
+            "type": "string",
+            "nullable": true
+          },
+          "stockMicro": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Vibrato": {
+        "type": "object",
+        "properties": {
+          "idVibrato": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nomVibrato": {
+            "type": "string",
+            "nullable": true
+          },
+          "typeVibrato": {
+            "type": "string",
+            "nullable": true
+          },
+          "stockVibrato": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false

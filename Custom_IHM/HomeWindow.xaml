@@ -1,0 +1,28 @@
+﻿<Window x:Class="Custom_IHM.HomeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Custom_IHM" xmlns:coordination="clr-namespace:Custom_IHM.Coordination" d:DataContext="{d:DesignInstance Type=coordination:Coordination}"
+        mc:Ignorable="d"
+        Title="HomeWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Background="#313133">
+            <TextBlock Text="Bienvenue" FontSize="36" Foreground="White" Margin="20,0" VerticalAlignment="Center"/>
+            <TextBlock Text="{Binding connectedClient.IdClient}" FontSize="36" Foreground="White" Margin="200,0" VerticalAlignment="Center"/>
+            <Button Content="Déconnexion" HorizontalAlignment="Right" Margin="0,30,20,0" VerticalAlignment="Top" Height="30" Background="#C23934" Foreground="White"/>
+        </Grid>
+
+        <Grid Grid.Row="1" Background="#EFEFF4">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,50">
+                <Button Content="Passer une nouvelle commande" Width="300" Height="50" Margin="0,20" Background="#2E8B57" Foreground="White"/>
+                <Button Content="Ma commande en attente" Width="300" Height="50" Margin="0,20" Background=" #FF8C00" Foreground="White"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

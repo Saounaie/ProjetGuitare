@@ -16,7 +16,7 @@ namespace JOUJE_DLL
         public string nomBois { get; set; }
         public double poidsBois { get; set; }
         public string région { get; set; }
-        public int stockBois { get; set; }
+        public bool stockBois { get; set; }
     }
 
     
@@ -26,7 +26,7 @@ namespace JOUJE_DLL
         public int idMicro { get; set; }
         public string nomMicro { get; set; }
         public string caracteristiquesMicro { get; set; }
-        public int stockMicro { get; set;}
+        public bool stockMicro { get; set;}
     }
 
     public class Vibrato
@@ -34,7 +34,7 @@ namespace JOUJE_DLL
         public int idVibrato { get; set; }
         public string nomVibrato { get; set; }
         public string typeVibrato { get; set; }
-        public int stockVibrato { get; set; }
+        public bool stockVibrato { get; set; }
     }
     public class Guitare
     {
@@ -48,6 +48,22 @@ namespace JOUJE_DLL
         public int idBois_1 { get; set; }
         public int idBois_2 { get; set; }
         public int idVibrato { get; set; }
+    }
+
+    public class Commande
+    {
+        public int idCommande { get; set; }
+        public string dateCommande { get; set; }
+        public string numCoommande { get; set; }
+        public int idGuitare { get; set; }
+
+    }
+
+    public class Client
+    {
+        public int idClient { get; set; }
+        public string pseudoClient { get; set; }
+        public string mdpClient { get; set; }
     }
 
 
@@ -377,6 +393,111 @@ namespace JOUJE_DLL
                 parameters.Add("@vibratoID", _guitare.idVibrato, DbType.Int16, ParameterDirection.Input);
 
                 connection.Query<Guitare>("UpdateVibrato", parameters, commandType: CommandType.StoredProcedure);
+            }
+        }
+
+        // --------------------------------------------------------
+        public List<Commande> GetAllCommandes()
+        {
+            using (SqlConnection connection = new SqlConnection(connexionJoujeV2))
+            {
+                connection.Open();
+                List<Commande> _commandes = connection.Query<Commande>("SELECT * FROM Commande").ToList();
+
+                return _commandes;
+            }
+        }
+        // ---------------------------------------------------------
+        public void CreateClient(ref Client client)
+        {
+            using (SqlConnection connection = new SqlConnection(connexionJoujeV2))
+            {
+                connection.Open();
+                connection.Query<Client>("AddClient", new { @pseudo = client.pseudoClient, @mdp = client.mdpClient}, commandType: CommandType.StoredProcedure);
+            }
+        }
+
+        public void UpdateClient(ref Client client)
+        {
+            using (SqlConnection connection = new SqlConnection(connexionJoujeV2))
+            {
+                connection.Open();
+                connection.Query<Client>("UpdateClient", new { @clientID = client.idClient, @mdpClient = client.mdpClient }, commandType: CommandType.StoredProcedure);
+            }
+        }
+
+        public async Task<bool> VerifyLogin(Client client)
+        {
+            using (SqlConnection connection = new SqlConnection(connexionJoujeV2))
+            {
+                await connection.OpenAsync();
+
+                var query = "SELECT COUNT(*) FROM Client WHERE pseudoClient = @pseudoClient AND mdpClient = @mdpClient";
+                var parameters = new DynamicParameters();
+                parameters.Add("@pseudoClient", client.pseudoClient);
+                parameters.Add("@mdpClient", client.mdpClient);
+
+                var count = await connection.QuerySingleOrDefaultAsync<int>(query, parameters);
+
+                return count > 0;
+
+            }
+        }
+
+        public async Task<Client> GetClientByID(Client client)
+        {
+            using(SqlConnection connection = new SqlConnection(connexionJoujeV2))
+            {
+                await connection.OpenAsync();
+
+                var clientTrouve = connection.QueryFirstOrDefault<Client>("SELECT * FROM Client WHERE idClient = @ID", new { @ID = client.idClient });
+
+                return clientTrouve;
+
+            }
+        }
+
+/*        public async Task<(bool, int)> VerifyLoginWithID(Client client)
+        {
+            using (SqlConnection connection = new SqlConnection(connexionJoujeV2))
+            {
+                await connection.OpenAsync();
+
+                var query = "SELECT COUNT(*) FROM Client WHERE pseudoClient = @pseudoClient AND mdpClient = @mdpClient";
+                var parameters = new DynamicParameters();
+                parameters.Add("@pseudoClient", client.pseudoClient);
+                parameters.Add("@mdpClient", client.mdpClient);
+
+                var count = await connection.QuerySingleOrDefaultAsync<int>(query, parameters);
+
+                if (count > 0)
+                {
+                    query = "SELECT idClient FROM Client WHERE pseudoClient = @pseudoClient AND mdpClient = @mdpClient";
+                    var clientParameters = new DynamicParameters();
+                    clientParameters.Add("@pseudoClient", client.pseudoClient);
+                    clientParameters.Add("@mdpClient", client.mdpClient);
+
+                    var clientId = await connection.QuerySingleOrDefaultAsync<int>(query, clientParameters);
+
+                    return (true, clientId);
+                }
+
+                return (false, 0);
+            }
+        }*/
+
+        public async Task<int> GetIDByClient(Client client)
+        {
+            using (SqlConnection connection = new SqlConnection(connexionJoujeV2))
+            {
+                await connection.OpenAsync();
+
+                var query = "SELECT idClient FROM Client WHERE pseudoClient = @pseudoClient AND mdpClient = @mdpClient";
+                var parameters = new DynamicParameters();
+                parameters.Add("@pseudoClient", client.pseudoClient);
+                parameters.Add("@mdpClient", client.mdpClient);
+
+                return await connection.QuerySingleOrDefaultAsync<int>(query, parameters);
             }
         }
 
