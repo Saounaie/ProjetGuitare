@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NS_Jouje;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,10 +20,26 @@ namespace Custom_IHM
     /// </summary>
     public partial class HomeWindow : Window
     {
-        public HomeWindow()
+        private int clientID;
+
+        public HomeWindow(int clientID)
         {
             InitializeComponent();
+            this.clientID= clientID;
             DataContext = Coordination.Coordination.Instance;
+        }
+
+        private void newCommandBTN_Click(object sender, RoutedEventArgs e)
+        {
+            AddGuitareWindow addGuitare = new AddGuitareWindow(clientID);
+            addGuitare.ShowDialog();
+        }
+
+        private void commandesInWaitBTN_Click(object sender, RoutedEventArgs e)
+        {
+            Guitare guitareCommande = Coordination.Coordination.Instance.GetGuitareByIDClient(clientID);
+            CommandesWindow commandes = new CommandesWindow(guitareCommande);
+            commandes.ShowDialog();
         }
     }
 }

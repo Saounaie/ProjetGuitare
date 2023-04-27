@@ -21,3 +21,7 @@ C:\Users\trinc\source\repos\DeploiementJouje\Custom_IHM\bin\Debug\Newtonsoft.Jso
 C:\Users\trinc\source\repos\DeploiementJouje\Custom_IHM\obj\Debug\Custom_IHM.csproj.CopyComplete
 C:\Users\trinc\source\repos\DeploiementJouje\Custom_IHM\obj\Debug\HomeWindow.g.cs
 C:\Users\trinc\source\repos\DeploiementJouje\Custom_IHM\obj\Debug\HomeWindow.baml
+C:\Users\trinc\source\repos\DeploiementJouje\Custom_IHM\obj\Debug\AddGuitareWindow.g.cs
+C:\Users\trinc\source\repos\DeploiementJouje\Custom_IHM\obj\Debug\AddGuitareWindow.baml
+C:\Users\trinc\source\repos\DeploiementJouje\Custom_IHM\obj\Debug\CommandesWindow.g.cs
+C:\Users\trinc\source\repos\DeploiementJouje\Custom_IHM\obj\Debug\CommandesWindow.baml

@@ -14,14 +14,14 @@
 
         <Grid Grid.Row="0" Background="#313133">
             <TextBlock Text="Bienvenue" FontSize="36" Foreground="White" Margin="20,0" VerticalAlignment="Center"/>
-            <TextBlock Text="{Binding connectedClient.IdClient}" FontSize="36" Foreground="White" Margin="200,0" VerticalAlignment="Center"/>
-            <Button Content="Déconnexion" HorizontalAlignment="Right" Margin="0,30,20,0" VerticalAlignment="Top" Height="30" Background="#C23934" Foreground="White"/>
+            <TextBlock Text="{Binding connectedClient.PseudoClient}" FontSize="36" Foreground="White" Margin="200,0" VerticalAlignment="Center"/>
+            <Button x:Name="disconnectBTN" Content="Déconnexion" HorizontalAlignment="Right" Margin="0,30,20,0" VerticalAlignment="Top" Height="30" Background="#C23934" Foreground="White"/>
         </Grid>
 
         <Grid Grid.Row="1" Background="#EFEFF4">
             <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,50">
-                <Button Content="Passer une nouvelle commande" Width="300" Height="50" Margin="0,20" Background="#2E8B57" Foreground="White"/>
-                <Button Content="Ma commande en attente" Width="300" Height="50" Margin="0,20" Background=" #FF8C00" Foreground="White"/>
+                <Button x:Name="newCommandBTN" Click="newCommandBTN_Click" Content="Passer une nouvelle commande" Width="300" Height="50" Margin="0,20" Background="#2E8B57" Foreground="White"/>
+                <Button x:Name="commandesInWaitBTN" Click="commandesInWaitBTN_Click"  Content="Ma commande en attente" Width="300" Height="50" Margin="0,20" Background=" #FF8C00" Foreground="White"/>
             </StackPanel>
         </Grid>
     </Grid>

@@ -343,6 +343,17 @@ namespace JOUJE_DLL
             }
         }
 
+        public Guitare GetGuitareByIDClient(int id)
+        {
+            using (SqlConnection connection = new SqlConnection(connexionJoujeV2))
+            {
+                connection.Open();
+                Guitare _guitare =  connection.QueryFirstOrDefault<Guitare>("SELECT * FROM Guitare WHERE idClient = @ID", new { @ID = id });
+
+                return _guitare;
+            }
+        }
+
         public void DeleteGuitare(int _id)
         {
             using (SqlConnection connection = new SqlConnection(connexionJoujeV2))

@@ -49,5 +49,11 @@ namespace API_Jouje.Controllers
             _base.DeleteGuitare(id);
             return Ok();
         }
+
+        [HttpGet("GetGuitareByIDClient", Name = "GetGuitareByIDClient")]
+        public ActionResult<Guitare> GetGyutareByIDClient(int id)
+        {
+            return Ok(_base.GetGuitareByIDClient(id));
+        }
     }
 }

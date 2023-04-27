@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\trinc\source\repos\DeploiementJouje\Custom_IHM\App.xaml
-3-1199149246
+5-12949461
 
-111419466257
+131847675140
 152026844243
-HomeWindow.xaml;InscriptionWindow.xaml;MainWindow.xaml;
+AddGuitareWindow.xaml;CommandesWindow.xaml;HomeWindow.xaml;InscriptionWindow.xaml;MainWindow.xaml;
 
 True
 

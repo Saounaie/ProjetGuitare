@@ -143,7 +143,7 @@ namespace TestJouje
             var clientATester = ws.GetClientByIDAsync(4).Result;
             Console.WriteLine($"PSEUDO DU CLIENT NUMERO 4 {clientATester.PseudoClient}");
 
-            var result = ws.VerifyLoginWithIDAsync(clientATester).Result;
+            var result = ws.VerifyLoginAsync(clientATester).Result;
             if (result)
             {
                 Console.WriteLine($"JE PETE MON CRANE SI CA MARCHE {clientATester.PseudoClient} {clientATester.IdClient}");
@@ -158,6 +158,9 @@ namespace TestJouje
             Console.WriteLine("Test du client connecté");
             var clientTrouve = ws.GetClientByIDAsync(4).Result;
             Console.WriteLine(clientTrouve.IdClient);
+            Console.WriteLine("------------------------------------");
+            var guitareCommande = jouje.GetGuitareByIDClient(4);
+            Console.WriteLine(guitareCommande.idClient);
 
         
 

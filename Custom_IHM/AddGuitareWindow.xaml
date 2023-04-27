@@ -1,0 +1,109 @@
+﻿<Window x:Class="Custom_IHM.AddGuitareWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Custom_IHM" xmlns:coordination="clr-namespace:Custom_IHM.Coordination" d:DataContext="{d:DesignInstance Type=coordination:Coordination}"
+        mc:Ignorable="d"
+        Title="AddGuitareWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Type de bois :" Margin="5" />
+        <ComboBox x:Name="ComboBoxTypeDeBois" Grid.Row="0" Grid.Column="1" Margin="5" ItemsSource="{Binding Liste_Bois}" SelectedItem="{Binding Bois_Selectionne}">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock>
+                        <Run Text="{Binding NomBois}" />
+                    </TextBlock>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+        <Label Content="Type de bois :" Grid.Row="1" Margin="5" />
+        <ComboBox x:Name="ComboBoxTypeDeBois2" Grid.Row="1" Grid.Column="1" Margin="5" ItemsSource="{Binding Liste_Bois}" SelectedItem="{Binding Bois_Selectionne}">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock>
+                        <Run Text="{Binding NomBois}" />
+                    </TextBlock>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+        <Label Content="Type de bois :" Margin="5" Grid.Row="2" />
+        <ComboBox x:Name="ComboBoxTypeDeBois3" Grid.Row="2" Grid.Column="1" Margin="5" ItemsSource="{Binding Liste_Bois}" SelectedItem="{Binding Bois_Selectionne}">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock>
+                        <Run Text="{Binding NomBois}" />
+                    </TextBlock>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+        <Label Content="Micro 1 :" Margin="5" Grid.Row="3" />
+        <ComboBox x:Name="ComboBoxMicro1" Grid.Row="3" Grid.Column="1" Margin="5" ItemsSource="{Binding Liste_Micros}" SelectedItem="{Binding Micro_Selectionne}">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock>
+                        <Run Text="{Binding NomMicro}" />
+                    </TextBlock>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+        <Label Content="Micro 2 :" Margin="5" Grid.Row="4" />
+        <ComboBox x:Name="ComboBoxMicro2" Grid.Row="4" Grid.Column="1" Margin="5" ItemsSource="{Binding Liste_Micros}" SelectedItem="{Binding Micro_Selectionne}">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock>
+                        <Run Text="{Binding NomMicro}" />
+                    </TextBlock>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+        <Label Content="Micro 3 :" Margin="5" Grid.Row="5" />
+        <ComboBox x:Name="ComboBoxMicro3" Grid.Row="5" Grid.Column="1" Margin="5" ItemsSource="{Binding Liste_Micros}" SelectedItem="{Binding Micro_Selectionne}">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock>
+                        <Run Text="{Binding NomMicro}" />
+                    </TextBlock>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+        <Label Content="Type de vibrato :" Margin="5" Grid.Row="6" />
+        <ComboBox x:Name="ComboBoxTypeDeVibrato" Grid.Row="6" Grid.Column="1" Margin="5" ItemsSource="{Binding Liste_Vibratos}" SelectedItem="{Binding Vibrato_Selectionne}">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock>
+                        <Run Text="{Binding NomVibrato}" />
+                    </TextBlock>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="7" Grid.Column="1" HorizontalAlignment="Right" Margin="5">
+            <Button Content="Annuler" Margin="5" Width="200" Height="50" VerticalAlignment="Bottom"/>
+            <Button x:Name="addGuitareBTN" Click="addGuitareBTN_Click" Content="Valider" Margin="5" Width="200" Height="50" VerticalAlignment="Bottom" />
+            <TextBlock Text="{Binding connectedClient.IdClient}" Width="40" VerticalAlignment="Top"></TextBlock>
+        </StackPanel>
+
+    </Grid>
+</Window>

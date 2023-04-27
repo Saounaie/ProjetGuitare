@@ -462,12 +462,12 @@
         }
       }
     },
-    "/api/Client/VerifyLoginWithID": {
+    "/api/Client/GetIDByClient": {
       "post": {
         "tags": [
           "Client"
         ],
-        "operationId": "VerifyLoginWithID",
+        "operationId": "GetIDByClient",
         "requestBody": {
           "content": {
             "application/json": {
@@ -493,17 +493,20 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "type": "boolean"
+                  "type": "integer",
+                  "format": "int32"
                 }
               },
               "application/json": {
                 "schema": {
-                  "type": "boolean"
+                  "type": "integer",
+                  "format": "int32"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "boolean"
+                  "type": "integer",
+                  "format": "int32"
                 }
               }
             }
@@ -734,6 +737,47 @@
           "Guitare"
         ],
         "operationId": "DeletGuitare",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Guitare"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Guitare"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Guitare"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Guitare/GetGuitareByIDClient": {
+      "get": {
+        "tags": [
+          "Guitare"
+        ],
+        "operationId": "GetGuitareByIDClient",
         "parameters": [
           {
             "name": "id",

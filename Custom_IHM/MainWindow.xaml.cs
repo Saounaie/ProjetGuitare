@@ -61,7 +61,7 @@ namespace Custom_IHM
             {
                 var id = await Coordination.Coordination.Instance.GetIDByClient(clientAVerifier);
                 clientAVerifier.IdClient = id;
-                HomeWindow home = new HomeWindow();
+                HomeWindow home = new HomeWindow(id);
                 home.ShowDialog();
             }
             else
