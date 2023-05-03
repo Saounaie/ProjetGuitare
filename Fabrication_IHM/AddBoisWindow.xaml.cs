@@ -30,14 +30,14 @@ namespace Fabrication_IHM
         private async void addBoisBTN_Click(object sender, RoutedEventArgs e)
         {
             double poids = Convert.ToDouble(poidsBoisTBX.Text);
-            int stock = Convert.ToInt32(stockBoisTBX.Text);
-            
+            bool isStock = stockBoisCheckBox.IsChecked ?? false;
+
             var nvBois = new Bois
             {
                 NomBois = nomBoisTBX.Text,
                 PoidsBois = poids,
                 Région = régionBoisTBX.Text,
-                StockBois = stock
+                StockBois = isStock
                 
             };
 

@@ -70,9 +70,9 @@ namespace Custom_IHM.Coordination
             set { _connectedClient = value; Signale_Changement(); }
         }
 
-        private IEnumerable<Bois> _Liste_Bois;
+        private ICollection<Bois> _Liste_Bois;
 
-        public IEnumerable<Bois> Liste_Bois
+        public ICollection<Bois> Liste_Bois
         {
             get { return _Liste_Bois; }
             set { _Liste_Bois = value; Signale_Changement(); }

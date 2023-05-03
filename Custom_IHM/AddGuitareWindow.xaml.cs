@@ -53,6 +53,8 @@ namespace Custom_IHM
             Vibrato selectedVibrato = (Vibrato)ComboBoxTypeDeVibrato.SelectedItem;
             int selectedVibratoID = selectedVibrato.IdVibrato;
 
+            
+
             var nouvelleGuitare = new Guitare
             {
                 IdBois= selectedBoisID,
@@ -75,6 +77,59 @@ namespace Custom_IHM
             }
 
             
+        }
+
+        private void ComboBoxTypeDeBois_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Bois selectedBois = (Bois)ComboBoxTypeDeBois.SelectedItem;
+           
+
+            if (selectedBois != null )
+            {
+                bool enStock = selectedBois.StockBois;
+
+                if (!enStock)
+                {
+                    MessageBox.Show("Stock épuisé");
+                }
+            }
+        }
+
+        private void ComboBoxTypeDeBois2_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+   
+
+
+            Bois selectedBois2 = (Bois)ComboBoxTypeDeBois2.SelectedItem;
+
+
+
+            if (selectedBois2 != null)
+            {
+                bool enStock = selectedBois2.StockBois;
+
+                if (!enStock)
+                {
+                    MessageBox.Show("Stock épuisé");
+                }
+            }
+        }
+
+        private void ComboBoxTypeDeBois3_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Bois selectedBois3 = (Bois)ComboBoxTypeDeBois3.SelectedItem;
+
+
+
+            if (selectedBois3 != null)
+            {
+                bool enStock = selectedBois3.StockBois;
+
+                if (!enStock)
+                {
+                    MessageBox.Show("Stock épuisé");
+                }
+            }
         }
     }
 }

@@ -40,7 +40,7 @@ namespace Fabrication_IHM
             {
                 NomMicro = nomMicroTBX.Text,
                 CaracteristiquesMicro = caractMicroTBX.Text,
-                StockMicro = stock
+               // StockMicro = stock
 
             };
 

@@ -38,7 +38,7 @@ namespace Fabrication_IHM
             {
                 NomVibrato = nomVibratoTBX.Text,
                 TypeVibrato = typeVibratoTBX.Text,
-                StockVibrato = stock
+                // StockVibrato = stock
 
             };
 

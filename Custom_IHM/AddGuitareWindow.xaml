@@ -23,7 +23,7 @@
         </Grid.ColumnDefinitions>
 
         <Label Content="Type de bois :" Margin="5" />
-        <ComboBox x:Name="ComboBoxTypeDeBois" Grid.Row="0" Grid.Column="1" Margin="5" ItemsSource="{Binding Liste_Bois}" SelectedItem="{Binding Bois_Selectionne}">
+        <ComboBox x:Name="ComboBoxTypeDeBois" Grid.Row="0" Grid.Column="1" Margin="5" ItemsSource="{Binding Liste_Bois}" SelectedItem="{Binding Bois_Selectionne}" SelectionChanged="ComboBoxTypeDeBois_SelectionChanged">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <TextBlock>
@@ -34,7 +34,7 @@
         </ComboBox>
 
         <Label Content="Type de bois :" Grid.Row="1" Margin="5" />
-        <ComboBox x:Name="ComboBoxTypeDeBois2" Grid.Row="1" Grid.Column="1" Margin="5" ItemsSource="{Binding Liste_Bois}" SelectedItem="{Binding Bois_Selectionne}">
+        <ComboBox x:Name="ComboBoxTypeDeBois2" Grid.Row="1" Grid.Column="1" Margin="5" ItemsSource="{Binding Liste_Bois}" SelectedItem="{Binding Bois_Selectionne}" SelectionChanged="ComboBoxTypeDeBois2_SelectionChanged">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <TextBlock>
@@ -45,7 +45,7 @@
         </ComboBox>
 
         <Label Content="Type de bois :" Margin="5" Grid.Row="2" />
-        <ComboBox x:Name="ComboBoxTypeDeBois3" Grid.Row="2" Grid.Column="1" Margin="5" ItemsSource="{Binding Liste_Bois}" SelectedItem="{Binding Bois_Selectionne}">
+        <ComboBox x:Name="ComboBoxTypeDeBois3" Grid.Row="2" Grid.Column="1" Margin="5" ItemsSource="{Binding Liste_Bois}" SelectedItem="{Binding Bois_Selectionne}" SelectionChanged="ComboBoxTypeDeBois3_SelectionChanged">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <TextBlock>

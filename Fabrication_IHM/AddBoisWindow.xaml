@@ -29,7 +29,7 @@
         <TextBox x:Name="régionBoisTBX" Grid.Row="2" Grid.Column="1"  Margin="10" Width="200"/>
 
         <Label Grid.Row="3" Grid.Column="0" Content="Stock :" Margin="10"/>
-        <TextBox x:Name="stockBoisTBX" Grid.Row="3" Grid.Column="1" Margin="10" Width="200"/>
+        <CheckBox x:Name="stockBoisCheckBox" Grid.Row="3" Grid.Column="1" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Center"/>
 
         <StackPanel Grid.Row="4" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
             <Button x:Name="cancelAddBoisBTN" Content="Annuler" Margin="10" Width="80" Click="cancelAddBoisBTN_Click"/>
