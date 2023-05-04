@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:luthier_android="clr-namespace:Luthier_Android" x:DataType="luthier_android:Coordination"
+            x:Class="Luthier_Android.StocksPage">
+  <!--Pages can be added as references or inline-->
+    <ContentPage Title="Bois" >
+
+    </ContentPage>
+  <ContentPage Title="Tab 2" />
+  <ContentPage Title="Tab 3" />
+</TabbedPage>

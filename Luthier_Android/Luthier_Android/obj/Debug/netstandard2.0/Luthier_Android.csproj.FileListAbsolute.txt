@@ -1,0 +1,16 @@
+C:\Users\trinc\source\repos\DeploiementJouje\Luthier_Android\Luthier_Android\bin\Debug\netstandard2.0\Luthier_Android.deps.json
+C:\Users\trinc\source\repos\DeploiementJouje\Luthier_Android\Luthier_Android\bin\Debug\netstandard2.0\Luthier_Android.dll
+C:\Users\trinc\source\repos\DeploiementJouje\Luthier_Android\Luthier_Android\bin\Debug\netstandard2.0\Luthier_Android.pdb
+C:\Users\trinc\source\repos\DeploiementJouje\Luthier_Android\Luthier_Android\obj\Debug\netstandard2.0\Luthier_Android.csproj.AssemblyReference.cache
+C:\Users\trinc\source\repos\DeploiementJouje\Luthier_Android\Luthier_Android\obj\Debug\netstandard2.0\Luthier_Android.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\trinc\source\repos\DeploiementJouje\Luthier_Android\Luthier_Android\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\trinc\source\repos\DeploiementJouje\Luthier_Android\Luthier_Android\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\trinc\source\repos\DeploiementJouje\Luthier_Android\Luthier_Android\obj\Debug\netstandard2.0\Luthier_Android.AssemblyInfoInputs.cache
+C:\Users\trinc\source\repos\DeploiementJouje\Luthier_Android\Luthier_Android\obj\Debug\netstandard2.0\Luthier_Android.AssemblyInfo.cs
+C:\Users\trinc\source\repos\DeploiementJouje\Luthier_Android\Luthier_Android\obj\Debug\netstandard2.0\Luthier_Android.csproj.CoreCompileInputs.cache
+C:\Users\trinc\source\repos\DeploiementJouje\Luthier_Android\Luthier_Android\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\trinc\source\repos\DeploiementJouje\Luthier_Android\Luthier_Android\obj\Debug\netstandard2.0\Luthier_Android.dll
+C:\Users\trinc\source\repos\DeploiementJouje\Luthier_Android\Luthier_Android\obj\Debug\netstandard2.0\refint\Luthier_Android.dll
+C:\Users\trinc\source\repos\DeploiementJouje\Luthier_Android\Luthier_Android\obj\Debug\netstandard2.0\Luthier_Android.pdb
+C:\Users\trinc\source\repos\DeploiementJouje\Luthier_Android\Luthier_Android\obj\Debug\netstandard2.0\ref\Luthier_Android.dll
+C:\Users\trinc\source\repos\DeploiementJouje\Luthier_Android\Luthier_Android\obj\Debug\netstandard2.0\StocksPage.xaml.g.cs

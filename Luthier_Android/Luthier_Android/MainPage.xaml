@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Luthier_Android.MainPage">
+
+    <Grid>
+        <!-- Ligne en haut -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- En-tête -->
+        <Frame Grid.Row="0" BackgroundColor="#007acc" HasShadow="False" Padding="10">
+            <Label Text="Tableau de bord" FontSize="20" TextColor="White" 
+               HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+        </Frame>
+
+        <!-- Contenu -->
+        <StackLayout Grid.Row="1" BackgroundColor="White" Padding="10" VerticalOptions="Center">
+            <Label Text="Bienvenue ! Sélectionnez une option." FontSize="24" 
+               HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="0, 10, 0, 20"/>
+
+            <Button x:Name="stockBtn" Text="Stocks" TextColor="White" FontSize="24" 
+                HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="0, 0, 0, 10" 
+                BackgroundColor="#007acc" Clicked="stockBtn_Clicked"/>
+
+            <Button x:Name="clientsBtn" Text="Commandes" TextColor="White" FontSize="24" 
+                HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="0, 0, 0, 10" 
+                BackgroundColor="#007acc"/>
+
+        </StackLayout>
+
+        <!-- Pied de page -->
+        <StackLayout Grid.Row="2" BackgroundColor="White" Padding="10">
+            <Button Text="Quitter" TextColor="White" FontSize="24" 
+                HorizontalOptions="FillAndExpand" VerticalOptions="Center" 
+                BackgroundColor="#FF0000" Clicked="Button_Clicked"/>
+        </StackLayout>
+    </Grid>
+
+
+
+</ContentPage>
