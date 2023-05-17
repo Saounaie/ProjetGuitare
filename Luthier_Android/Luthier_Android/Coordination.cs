@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Text;
-using NS_Jouje;
+using NS_JOUJE_AZURE;
 
 namespace Luthier_Android
 {
@@ -19,13 +20,13 @@ namespace Luthier_Android
             }
         }
 
-        JoujeWS jouje;
+        joujeAzure jouje;
 
         public Coordination()
         {
             HttpClient client = new HttpClient();
-            jouje = new JoujeWS("https://localhost:7257", client);
-            // Liste_Bois = jouje.GetAllBoisAsync().Result;
+            jouje = new joujeAzure("https://apijouje20230509165034.azurewebsites.net/", client);
+            Liste_Bois = jouje.GetAllBoisAsync().Result;
 
         }
 
@@ -36,6 +37,8 @@ namespace Luthier_Android
             get { return _Liste_Bois; }
             set { _Liste_Bois = value; Signale_Changement(); }
         }
+
+        
 
         
 

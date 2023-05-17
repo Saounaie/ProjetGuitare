@@ -104,6 +104,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="OpenAPIs\swagger.cs" />
+    <Compile Include="OpenAPIs\swagger1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -126,6 +127,12 @@
       <ClassName>JoujeCS</ClassName>
       <CodeGenerator>NSwagCSharp</CodeGenerator>
       <SourceUri>https://localhost:7257/swagger/v1/swagger.json</SourceUri>
+    </None>
+    <None Include="OpenAPIs\swagger1.json">
+      <Namespace>NS_JOUJE_AZURE</Namespace>
+      <ClassName>joujeAzure</ClassName>
+      <CodeGenerator>NSwagCSharp</CodeGenerator>
+      <SourceUri>https://apijouje20230509165034.azurewebsites.net/swagger/v1/swagger.json</SourceUri>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

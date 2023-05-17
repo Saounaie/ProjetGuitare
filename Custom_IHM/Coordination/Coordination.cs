@@ -1,4 +1,4 @@
-﻿using NS_Jouje;
+﻿using NS_JOUJE_AZURE;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,12 +22,12 @@ namespace Custom_IHM.Coordination
         }
 
 
-        JoujeCS jouje;
+        joujeAzure jouje;
 
         public Coordination()
         {
             HttpClient client = new HttpClient();
-            jouje = new JoujeCS("https://localhost:7257", client);
+            jouje = new joujeAzure("https://apijouje20230509165034.azurewebsites.net/", client);
             Liste_Bois = jouje.GetAllBoisAsync().Result;
             Liste_Micros = jouje.GetAllMicrosAsync().Result;
             Liste_Vibratos = jouje.GetAllVibratosAsync().Result;
@@ -132,6 +132,18 @@ namespace Custom_IHM.Coordination
         {
             return jouje.GetGuitareByIDClientAsync(id).Result;
         }
+
+        public async Task UpdateGuitare(Guitare guitare)
+        {
+            await jouje.UpdateGuitareAsync(guitare);
+        }
+
+        public async Task UpdateGuitare(int idGuitare, string nomGuitare, int idClient, int idMicro, int idMicro1, int idMicro2, int idBois, int idBois1, int idBois2, int idVibrato)
+        {
+            await jouje.UpdateGuitareNotObjAsync(idGuitare, nomGuitare, idClient, idMicro, idMicro1, idMicro2, idBois, idBois1, idBois2, idVibrato);
+        }
+
+
 
     }
 }

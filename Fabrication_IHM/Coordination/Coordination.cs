@@ -4,7 +4,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using NS_Jouje;
+using NS_JOUJE_AZURE;
 
 namespace Fabrication_IHM.Coordination
 {
@@ -21,12 +21,12 @@ namespace Fabrication_IHM.Coordination
         }
 
 
-        JoujeWs jouje;
+        joujeAzure jouje;
 
         public Coordination()
         {
             HttpClient client = new HttpClient();
-            jouje = new JoujeWs("https://localhost:7257", client);
+            jouje = new joujeAzure("https://apijouje20230509165034.azurewebsites.net/", client);
             Liste_Bois = jouje.GetAllBoisAsync().Result;
             Liste_Micros = jouje.GetAllMicrosAsync().Result;
             Liste_Vibratos = jouje.GetAllVibratosAsync().Result;

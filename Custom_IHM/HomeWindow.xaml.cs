@@ -1,4 +1,4 @@
-﻿using NS_Jouje;
+﻿using NS_JOUJE_AZURE;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,9 +37,18 @@ namespace Custom_IHM
 
         private void commandesInWaitBTN_Click(object sender, RoutedEventArgs e)
         {
-            Guitare guitareCommande = Coordination.Coordination.Instance.GetGuitareByIDClient(clientID);
-            CommandesWindow commandes = new CommandesWindow(guitareCommande);
-            commandes.ShowDialog();
+            try
+            {
+                Guitare guitareCommande = Coordination.Coordination.Instance.GetGuitareByIDClient(clientID);
+                
+                CommandesWindow commandes = new CommandesWindow(guitareCommande, clientID);
+                commandes.ShowDialog();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show($"{ex.Message} : aucune guitare enregistrée");
+            }
+            
         }
     }
 }

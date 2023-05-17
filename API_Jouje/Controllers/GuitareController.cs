@@ -43,6 +43,13 @@ namespace API_Jouje.Controllers
             return Ok(_guitare);
         }
 
+        [HttpPut("UpdateGuitareNotObj", Name = "UpdateGuitareNotObj")]
+        public ActionResult UpdateGuitareNotObj(int idGuitare, string nomGuitare, int idClient, int idMicro, int idMicro1, int idMicro2, int idBois, int idBois1, int idBois2, int idVibrato)
+        {
+            _base.UpdateGuitare(idGuitare, nomGuitare, idClient, idMicro, idMicro1, idMicro2, idBois, idBois1, idBois2, idVibrato);
+            return Ok();
+        }
+
         [HttpDelete("DeletGuitare", Name = "DeletGuitare")]
         public ActionResult<Guitare> DeletGuitare(int id)
         {

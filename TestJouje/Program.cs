@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using JOUJE_DLL;
 using Microsoft.VisualBasic;
 using NS_Jouje;
+using NS_JOUJE_AZURE;
 
 namespace TestJouje
 {
@@ -117,7 +118,7 @@ namespace TestJouje
             Console.WriteLine();
             Console.WriteLine("--------------------TEST DU WEB SERVICE-------------------------");
             HttpClient client = new HttpClient();
-            C_Jouje ws = new C_Jouje("https://localhost:7257", client);
+            joujeAzure ws = new joujeAzure("https://apijouje20230509165034.azurewebsites.net/", client);
             Console.WriteLine("Liste de bois : ");
             var boisWs = ws.GetAllBoisAsync().Result;
             foreach (var e in boisWs)
@@ -161,6 +162,12 @@ namespace TestJouje
             Console.WriteLine("------------------------------------");
             var guitareCommande = jouje.GetGuitareByIDClient(4);
             Console.WriteLine(guitareCommande.idClient);
+            Console.WriteLine("----------------------------------");
+            Console.WriteLine("Test de l'update de la guitare");
+            var guitare = jouje.GetGuitareByIDClient(4);
+            Console.WriteLine(guitare.idBois_2);
+            ws.UpdateGuitareNotObjAsync(guitare.idGuitare, "Test de l'update", 1, 1, 1, 1, 1, 1, 1, 1);
+            Console.WriteLine(guitare.nomGuitare);
 
         
 

@@ -15,6 +15,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -99,9 +100,19 @@
             </ComboBox.ItemTemplate>
         </ComboBox>
 
-        <StackPanel Orientation="Horizontal" Grid.Row="7" Grid.Column="1" HorizontalAlignment="Right" Margin="5">
+        <Label Content="Nom de votre guitare :" Margin="5" Grid.Row="7" />
+        <Grid Grid.Row="7" Grid.Column="1" Margin="5" VerticalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBox x:Name="tbGuitareName" Grid.Column="0" Height="30" Width="200" Margin="0 0 25 0"/>
+            <TextBlock x:Name="actuelGuiatreName" Grid.Column="1" Height="30" Margin="0 0 10 0" VerticalAlignment="Center"/>
+        </Grid>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="8" Grid.Column="1" HorizontalAlignment="Right" Margin="5">
             <Button Content="Annuler" Margin="5" Width="200" Height="50" VerticalAlignment="Bottom"/>
-            <Button x:Name="addGuitareBTN"  Content="Valider" Margin="5" Width="200" Height="50" VerticalAlignment="Bottom" />
+            <Button x:Name="addGuitareBTN"  Content="Valider" Margin="5" Width="200" Height="50" VerticalAlignment="Bottom" Click="addGuitareBTN_Click" />
             <TextBlock Text="{Binding connectedClient.IdClient}" Width="40" VerticalAlignment="Top"></TextBlock>
         </StackPanel>
 

@@ -1,4 +1,4 @@
-﻿using NS_Jouje;
+﻿using NS_JOUJE_AZURE;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -53,17 +53,18 @@ namespace Custom_IHM
             Vibrato selectedVibrato = (Vibrato)ComboBoxTypeDeVibrato.SelectedItem;
             int selectedVibratoID = selectedVibrato.IdVibrato;
 
-            
+
 
             var nouvelleGuitare = new Guitare
             {
-                IdBois= selectedBoisID,
-                IdBois_1= selectedBoisID2,
-                IdBois_2= selectedBoisID3,
-                IdMicro= selectedMicroID1,
-                IdMicro_1= selectedMicroID2,
-                IdMicro_2= selectedMicroID3,
+                IdBois = selectedBoisID,
+                IdBois_1 = selectedBoisID2,
+                IdBois_2 = selectedBoisID3,
+                IdMicro = selectedMicroID1,
+                IdMicro_1 = selectedMicroID2,
+                IdMicro_2 = selectedMicroID3,
                 IdVibrato = selectedVibratoID,
+                NomGuitare = tbGuitareName.Text,
                 IdClient = clientID
             };
 
